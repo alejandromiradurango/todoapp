@@ -44,16 +44,16 @@ const AddTask = () => {
                 {...register("description", {
                     required: {
                         value: true,
-                        message: "Por favor ingresa la descripción de la tarea."
+                        message: "Please enter the description of the task."
                     }
                 })}
             />
-            {errors.description && <div className='absolute transition-all animate-fadeIn -top-1 ss:top-5 left-0 text-center bg-dark rounded-lg text-white w-[100%] text-lg p-5'>{errors.description.message}</div>}
+            {errors.description && <div className='absolute transition-all animate-fadeIn -top-1 ss:top-5 left-0 text-center bg-softLight dark:bg-dark rounded-lg text-white w-[100%] text-lg p-5'>{errors.description.message}</div>}
             <button 
                 type="submit" 
                 className="flex justify-center p-3 ss:p-4 w-[15%] shadow rounded-lg text-dark dark:text-light cursor-pointer bg-softLight hover:bg-[#f0e067] dark:bg-softDark dark:hover:bg-[#5f1f9b] transition-all" 
             >
-                <span class="ss:block hidden">Agregar</span>
+                <span class="ss:block hidden">Add Task</span>
                 <span class="ss:hidden block text-xl"><AiOutlinePlus /></span>
             </button>
         </form>

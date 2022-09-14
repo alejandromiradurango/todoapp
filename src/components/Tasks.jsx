@@ -66,8 +66,8 @@ const Tasks = () => {
     <div className="h-auto max-h-[500px] ss:max-h-[300px] hover:overflow-auto overflow-hidden bg-softLight dark:bg-dark rounded-lg px-2 mt-3">
         {tasks !== null ? tasks.map(task => (
             <Task task={task} deleteTask={deleteTask} toggleTask={toggleTask}/>
-        )) : <h1 className="font-primary text-2xl text-center text-dark dark:text-light uppercase py-4 font-bold">No hay tareas</h1>}
-        {tasks && tasks.length === 0 && <h1 className="font-primary text-2xl text-center text-dark dark:text-light uppercase py-4 font-bold">No hay tareas</h1>}
+        )) : <h1 className="font-primary text-2xl text-center text-dark dark:text-light uppercase py-4 font-bold">No tasks</h1>}
+        {tasks && tasks.length === 0 && <h1 className="font-primary text-2xl text-center text-dark dark:text-light uppercase py-4 font-bold">No tasks</h1>}
     </div>
   )
 }
