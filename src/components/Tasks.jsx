@@ -45,6 +45,7 @@ const Tasks = () => {
           const updatedTasks = tasks.filter(task => task.id !== id);
           localStorage.setItem('tasks', JSON.stringify(updatedTasks));
           setTasks(updatedTasks);
+          setNoTasks(updatedTasks);
           Swal.fire(
             'Deleted!',
             'Your task has been deleted.',
@@ -66,7 +67,7 @@ const Tasks = () => {
         {tasks !== null ? tasks.map(task => (
             <Task task={task} deleteTask={deleteTask} toggleTask={toggleTask}/>
         )) : <h1 className="font-primary text-2xl text-center text-dark dark:text-light uppercase py-4 font-bold">No hay tareas</h1>}
-        {tasks.length === 0 && <h1 className="font-primary text-2xl text-center text-dark dark:text-light uppercase py-4 font-bold">No hay tareas</h1>}
+        {tasks && tasks.length === 0 && <h1 className="font-primary text-2xl text-center text-dark dark:text-light uppercase py-4 font-bold">No hay tareas</h1>}
     </div>
   )
 }

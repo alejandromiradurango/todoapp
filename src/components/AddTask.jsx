@@ -19,10 +19,11 @@ const AddTask = () => {
     let localTasks = JSON.parse(localStorage.getItem('tasks'));
     if (localTasks !== null) {
        localTasks.push(task);
-       setTasks(localTasks);
        localStorage.setItem('tasks', JSON.stringify(localTasks));
+       setTasks(localTasks);
     } else {
        const arrayTask = [task];
+       setTasks(arrayTask);
        localStorage.setItem('tasks', JSON.stringify(arrayTask));
     }
     reset();
